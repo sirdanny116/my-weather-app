@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1> Know Your Weather</h1>
+            <p>Stay updated with the latest weather condition</p>
+        </header>
+        <div class="search-container"><input type="text" id="city" placeholder="Enter your city name..." onkeydown="handleEnter(event)">
+        <button onclick="getWeather()">Search</button>
+        <button onclick="getLocation()" title="Use my current location">📍</button>
+     </div>
+     <div id="error-message" class="error-message"></div>
+     <div id="loading" class="loading">Loading weather data...</div>
+     <div class="weather-container">
+        <section class="current-weather">
+            <div class="icon">
+                    <!-- CURRENT WEATHER ICON -->
+            </div>
+        <div class="infor">
+            <h2 id="cityName">City</h2>
+            <p id="temperature">-- C</p>
+            <p id="description">Description</p>
+            <p id="feel-like">Feels like: --</p>
+            <p id="humidity">Humidity: --</p>
+            <p id="wind">Wind</p>
+        </div> 
+        </section>
+        <section class="forecast">
+            <!-- FORECAST DAYS -->
+            <div class="day">
+                <p class="weekday">Day</p>
+                <div class="icon"></div>
+                <p class="temp">-- C</p>
+            </div>
+            <div class="day">
+                <p class="weekday">Day</p>
+                <div class="icon"></div>
+                <p class="temp">-- C</p>
+            </div>
+            <div class="day">
+                <p class="weekday">Day</p>
+                <div class="icon"></div>
+                <p class="temp">-- C</p>
+            </div>
+            <div class="day">
+                <p class="weekday">Day</p>
+                <div class="icon"></div>
+                <p class="temp">-- C</p>
+            </div>
+            <div class="day">
+                <p class="weekday">Day</p>
+                <div class="icon"></div>
+                <p class="temp">-- C</p>
+            </div>
+            <div class="day">
+                <p class="weekday">Day</p>
+                <div class="icon"></div>
+                <p class="temp">-- C</p>
+            </div>
+        </section>
+     </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
